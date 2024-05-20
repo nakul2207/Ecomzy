@@ -64,7 +64,7 @@ export const NavBar = () => {
           <Link to='/Aboutus' className='mt-2 mr-6 text-sm text-white'>About Us</Link>
           <Link to='/' className='mt-2 mr-6 text-sm text-white'>Catalog</Link>
           <Link to='/Contactus' className='mt-2 mr-6 text-sm text-white'>Contact Us</Link>
-          <Link to='/' className='mt-2 mr-6 text-sm text-white'>FAQ</Link>
+          <Link to='/FAQ' className='mt-2 mr-6 text-sm text-white'>FAQ</Link>
         </div>
         <div className='flex gap-x-5'>
           <Link to='/login'>

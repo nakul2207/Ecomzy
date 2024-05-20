@@ -6,8 +6,8 @@ function Login({setloggedIn,setuser}){
     return(
         <Form
         title="Welcome Back"
-        desc1="Discover essentials for today, tomorrow, and beyond."
-        desc2="Shop the latest trends and daily necessities to enhance your lifestyle."
+        desc1="Find today’s essentials and tomorrow’s trends."
+        desc2="Shop the latest in clothing and daily necessities."
         formtype="login"
         setloggedIn={setloggedIn}
         setuser={setuser}

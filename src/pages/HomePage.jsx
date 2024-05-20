@@ -1,5 +1,4 @@
 import React, { useState,useEffect,useRef } from 'react'
-import products from '../data'
 import { Product } from '../components/Product'
 import CarousImg from '../components/CarousImg'
 import PromoSection from '../components/PromoSection'

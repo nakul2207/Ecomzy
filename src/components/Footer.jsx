@@ -58,7 +58,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="text-center mt-8">
-        <p>© BonkersCorner 2024. All rights reserved.</p>
+        <p>© Ecomzy 2024. All rights reserved.</p>
       </div>
     </footer>
   );

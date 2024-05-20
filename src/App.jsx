@@ -27,7 +27,7 @@ function App() {
       <ToastContainer style={{ position: 'fixed', top: '8rem', right: '2rem' }}></ToastContainer>
       <Routes>
           <Route path='/' element={<HomePage/>}></Route>
-          <Route path='/cart' element={<CartPage/>}></Route>
+          <Route path='/cart' element={<CartPage user={user}/>}></Route>
           <Route path='/Aboutus' element={<AboutUs></AboutUs>}></Route>
           <Route path='/Contactus' element={<ContactUs></ContactUs>}></Route>
           <Route
@@ -36,7 +36,7 @@ function App() {
               !loggedIn ? (
                 <Login setloggedIn={setloggedIn} setuser={setuser} />
               ) : (
-                <Temp user={user}></Temp>
+                <Temp setloggedIn={setloggedIn} setuser={setuser} user={user}></Temp>
               )
             }
           />

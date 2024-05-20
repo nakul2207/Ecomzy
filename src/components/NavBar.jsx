@@ -49,7 +49,7 @@ export const NavBar = () => {
             <Link to='/Aboutus' className='block text-white text-sm py-2 px-4'>About Us</Link>
             <Link to='/' className='block text-white text-sm py-2 px-4'>Catalog</Link>
             <Link to='/Contactus' className='block text-white text-sm py-2 px-4'>Contact Us</Link>
-            <Link to='/' className='block text-white text-sm py-2 px-4'>FAQ</Link>
+            <Link to='/FAQ' className='block text-white text-sm py-2 px-4'>FAQ</Link>
           </div>
         )}
       </div>

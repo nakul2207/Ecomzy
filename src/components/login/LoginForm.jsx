@@ -33,7 +33,6 @@ export const LoginForm = ({ setloggedIn,setuser }) => {
         navigate('/');
         setloggedIn(true);
         const { token, user, message } = responseData;
-        console.log(user.firstname);
         setuser(user);
         
         // Store token in localStorage or sessionStorage for future requests

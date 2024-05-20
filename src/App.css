@@ -1,0 +1,25 @@
+/* src/index.css or src/App.css */
+
+/* Custom Toastify CSS with Tailwind */
+.toast-container {
+    @apply fixed z-50 p-4;
+  }
+  
+  .toast {
+    @apply bg-white border border-gray-200 rounded shadow-lg p-4 flex items-center justify-between w-full max-w-xs sm:max-w-sm md:max-w-md;
+  }
+  
+  .toast-body {
+    @apply text-sm text-gray-700;
+  }
+  
+  .toast-close-button {
+    @apply ml-4 text-gray-500 hover:text-gray-700;
+  }
+  
+  @media (max-width: 600px) {
+    .toast {
+      @apply w-full;
+    }
+  }
+  

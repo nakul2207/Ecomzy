@@ -63,6 +63,7 @@ export const Cartitem = ({ user }) => {
 
         try {
             await order(productDetails, amount, user._id);
+            toast.warning("PAYMENT GATEWAY UNDER PROGESS!!")
             toast.success("Order Placed!!");
             dispatch(clearCart());
         } catch (error) {
@@ -72,29 +73,29 @@ export const Cartitem = ({ user }) => {
     };
 
     return (
-        <div>
+        <div className='container mx-auto px-4'>
             {cartItems.length === 0 ? (
-                <div className='flex flex-col justify-center text-center h-screen'>
-                    <h1 className='font-bold'>Your cart is empty!</h1>
+                <div className='flex flex-col justify-center items-center text-center h-screen'>
+                    <h1 className='font-bold text-xl'>Your cart is empty!</h1>
                     <NavLink to='/'>
-                        <button className='bg-green-700 text-center text-white font-bold mt-2 py-2 rounded px-10'>SHOP NOW</button>
+                        <button className='bg-green-700 text-white font-bold mt-2 py-2 rounded px-10'>SHOP NOW</button>
                     </NavLink>
                 </div>
             ) : (
                 <div className='flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-4 my-5'>
-                    <div className='w-full md:w-1/2'>
+                    <div className='w-full md:w-2/3 lg:w-1/2'>
                         {cartItems.map((id) => (
                             <div key={id}>
                                 <Cartproduct props={products[id - 1]} />
-                                <div className='bg-black h-[.1rem]'></div>
+                                <div className='bg-black h-0.5 my-2'></div>
                             </div>
                         ))}
                     </div>
-                    <div className='w-full md:w-1/2 border py-6'>
+                    <div className='w-full md:w-1/3 lg:w-2/5 border p-6 rounded'>
                         <h1 className='text-green-700 text-lg'>YOUR CART</h1>
-                        <h2 className='text-green-700 font-bold text-5xl'>SUMMARY</h2>
+                        <h2 className='text-green-700 font-bold text-2xl md:text-5xl'>SUMMARY</h2>
                         <p className='my-2'>Total items: {cartItems.length}</p>
-                        <p className='mt-44'>Total amount: <b>${amount}</b></p>
+                        <p className='mt-10 md:mt-44'>Total amount: <b>${amount}</b></p>
                         <button className='bg-green-700 text-center text-white font-bold w-full mt-2 py-2 rounded' onClick={OrderHandler}>CHECKOUT NOW</button>
                     </div>
                 </div>

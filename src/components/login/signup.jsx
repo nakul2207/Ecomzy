@@ -1,6 +1,6 @@
 
 import Form from "./template";
-function Signup({setloggedIn}){
+function Signup({setloggedIn,setuser}){
     return(
         <Form
         title="Welcome To Ecomzy"
@@ -8,6 +8,7 @@ function Signup({setloggedIn}){
         desc2="Explore a wide range of clothes and everyday essentials."
         formtype="signup"
         setloggedIn={setloggedIn}
+        setuser={setuser}
         ></Form>
     )
 }

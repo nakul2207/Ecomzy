@@ -5,7 +5,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export const SignupForm = ({ setloggedIn }) => {
+export const SignupForm = ({ setloggedIn,setuser }) => {
   const navigate = useNavigate();
 
   const [formdata, setformdata] = useState({
@@ -40,7 +40,10 @@ export const SignupForm = ({ setloggedIn }) => {
       toast.warning("User already exists. Please try a different email."); // Show user exists message
     } else if (savedUserResponse.ok) {
       toast.success("Signed up Successfully!!"); // Show success message in toast
-      navigate("/"); // Navigate only on success
+      navigate("/");
+      setloggedIn(true);
+      const { res } = responseData;
+      setuser(res); // Navigate only on success
     } else {
       toast.error("An error occurred. Please try again later."); // Show generic error message
     }

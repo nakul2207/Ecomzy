@@ -38,6 +38,7 @@ exports.signup = async (req,res) => {
 
         return res.status(200).json({
             success:true,
+            res:user,
             message:'User Created Successfully',
         });
 

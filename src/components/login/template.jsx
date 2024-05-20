@@ -16,7 +16,7 @@ function Form({ title, desc1, desc2, formtype, setloggedIn ,setuser}) {
 
         <div>
           {formtype === "signup" ? (
-            <SignupForm setloggedIn={setloggedIn}></SignupForm>
+            <SignupForm setloggedIn={setloggedIn} setuser={setuser}></SignupForm>
           ) : (
             <LoginForm setloggedIn={setloggedIn} setuser={setuser}></LoginForm>
           )}

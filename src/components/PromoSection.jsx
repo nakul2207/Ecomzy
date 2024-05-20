@@ -6,7 +6,7 @@ import delivery from '../assets/delivery.jpg';
 const PromoSection = () => {
     return (
         <div className="p-8 bg-gray-100">
-            <div className="flex flex-col md:flex-row justify-around items-center my-2 space-y-8 md:space-y-0">
+            <div className="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
                 <div className="text-center max-w-xs">
                     <div className="mb-4">
                         <img src={hrs} alt="Shipping Icon" className="w-32 h-24 mx-auto" />

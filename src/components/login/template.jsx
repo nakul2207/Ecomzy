@@ -9,8 +9,9 @@ function Form({ title, desc1, desc2, formtype, setloggedIn ,setuser}) {
         <h1 className="text-3xl font-bold mb-4">{title}</h1>
 
         <p className="mb-4">
-          <span className="mr-2">{desc1}</span>
-          <span>{desc2}</span>
+          <span className="mr-2 font-semibold">{desc1}</span>
+          <br></br>
+          <span className="font-semibold">{desc2}</span>
         </p>
 
         <div>

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { clearCart } from '../redux/slice/cartslice';
 import products from '../data';
 import { Cartproduct } from './cartproduct';
 import { NavLink } from 'react-router-dom';
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify';
 
 export const Cartitem = ({ user }) => {
     const [amount, setAmount] = useState(0);
@@ -30,12 +30,9 @@ export const Cartitem = ({ user }) => {
 
         setAmount(parseFloat(calculatedAmount.toFixed(2)));
         setProductDetails(detailsArray);
-
-        console.log(detailsArray);
-        console.log(user._id);
     }, [cartItems]);
 
-    const order = async (orderDetails,amount,userId) => {
+    const order = async (orderDetails, amount, userId) => {
         const baseUrl = import.meta.env.VITE_BASE_URL;
 
         try {
@@ -46,7 +43,7 @@ export const Cartitem = ({ user }) => {
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({ product: orderDetails,totalamount:amount ,user: userId }),
+                    body: JSON.stringify({ product: orderDetails, totalamount: amount, user: userId }),
                 }
             );
 
@@ -63,7 +60,7 @@ export const Cartitem = ({ user }) => {
             toast.warning("Please Login!!");
             return;
         }
-    
+
         try {
             await order(productDetails, amount, user._id);
             toast.success("Order Placed!!");
@@ -73,7 +70,7 @@ export const Cartitem = ({ user }) => {
             console.error("Error placing order:", error);
         }
     };
-    
+
     return (
         <div>
             {cartItems.length === 0 ? (
@@ -84,8 +81,8 @@ export const Cartitem = ({ user }) => {
                     </NavLink>
                 </div>
             ) : (
-                <div className='flex justify-center w-5/6 gap-x-10 my-5'>
-                    <div className='ml-60 w-1/2'>
+                <div className='flex flex-col md:flex-row justify-center items-center md:items-start w-full gap-4 my-5'>
+                    <div className='w-full md:w-1/2'>
                         {cartItems.map((id) => (
                             <div key={id}>
                                 <Cartproduct props={products[id - 1]} />
@@ -93,7 +90,7 @@ export const Cartitem = ({ user }) => {
                             </div>
                         ))}
                     </div>
-                    <div className='w-2/6 border-1/2 py-6 h-screen'>
+                    <div className='w-full md:w-1/2 border py-6'>
                         <h1 className='text-green-700 text-lg'>YOUR CART</h1>
                         <h2 className='text-green-700 font-bold text-5xl'>SUMMARY</h2>
                         <p className='my-2'>Total items: {cartItems.length}</p>

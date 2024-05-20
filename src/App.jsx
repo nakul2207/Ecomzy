@@ -12,6 +12,7 @@ import { Temp } from './components/Temp'
 import { Footer } from './components/Footer'
 import AboutUs from './components/AboutUs'
 import ContactUs from './components/Contactus'
+import FAQPage from './components/FAQ'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/cart' element={<CartPage user={user}/>}></Route>
           <Route path='/Aboutus' element={<AboutUs></AboutUs>}></Route>
           <Route path='/Contactus' element={<ContactUs></ContactUs>}></Route>
+          <Route path='/FAQ' element={<FAQPage></FAQPage>}></Route>
           <Route
             path='/login'
             element={

@@ -27,7 +27,7 @@ export const NavBar = () => {
             <Link to='/Contactus'>
                 <div className='mt-2  mr-6 text-sm  text-white'>Contact Us</div>
             </Link>
-            <Link to='/'>
+            <Link to='/FAQ'>
                 <div className='mt-2  mr-6 text-sm  text-white'>FAQ</div>
             </Link>
         </div>

@@ -4,8 +4,8 @@ function Signup({setloggedIn}){
     return(
         <Form
         title="Welcome To Ecomzy"
-        desc1="Join us and find everything you need for today, tomorrow, and beyond."
-        desc2="Explore our wide range of clothing and daily necessities to future-proof your style and convenience."
+        desc1="Discover today’s must-haves and future favorites."
+        desc2="Explore a wide range of clothes and everyday essentials."
         formtype="signup"
         setloggedIn={setloggedIn}
         ></Form>
